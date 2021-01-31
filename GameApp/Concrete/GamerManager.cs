@@ -13,6 +13,7 @@ namespace GameApp.Concrete
         public GamerManager(IUserValidatonService userValidatonService)
         {
             _userValidatonService = userValidatonService;
+
         }
 
         public override void Add(Gamer gamer)
