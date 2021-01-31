@@ -14,8 +14,7 @@ namespace GameApp.Concrete
         Game _game;
         Campaign _campaign;
 
-        public GamerManager(IUserValidatonService userValidatonService, ICampaignService campaignService, ISalesService salesService,
-             Game game, Campaign campaign)
+        public GamerManager(IUserValidatonService userValidatonService, ICampaignService campaignService, ISalesService salesService,Game game, Campaign campaign)
         {
             _userValidatonService = userValidatonService;
             _campaignService = campaignService;
@@ -29,7 +28,6 @@ namespace GameApp.Concrete
         {
             if (_userValidatonService.Validate(gamer))
             {
-                
                 base.Add(gamer);
                 _salesService.Sell(_campaignService, _game, _campaign);
             }

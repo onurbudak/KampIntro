@@ -8,13 +8,6 @@ namespace GameApp.Concrete
 {
     public class SalesManager : ISalesService
     {
-        //ICampaignService _campaignService;
-
-        //public SalesManager(ICampaignService campaignService)
-        //{
-        //    _campaignService = campaignService;
-        //}
-
         public void Sell(ICampaignService campaignService, Game game,Campaign campaign)
         {
             var resultUnitPrice = campaignService.Add(game,campaign);
