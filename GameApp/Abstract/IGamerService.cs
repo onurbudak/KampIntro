@@ -7,8 +7,8 @@ namespace GameApp.Abstract
 {
     public interface IGamerService
     {
-        void Add(Gamer gamer);
-        void Delete(Gamer gamer);
-        void Update(Gamer gamer);
+        void Add(Gamer gamer, Game game, Campaign campaign);
+        void Delete(Gamer gamer, Game game, Campaign campaign);
+        void Update(Gamer gamer, Game game, Campaign campaign);
     }
 }

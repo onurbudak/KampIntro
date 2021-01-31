@@ -11,27 +11,22 @@ namespace GameApp.Concrete
         IUserValidatonService _userValidatonService;
         ICampaignService _campaignService;
         ISalesService _salesService;
-        Game _game;
-        Campaign _campaign;
 
-        public GamerManager(IUserValidatonService userValidatonService, ICampaignService campaignService, ISalesService salesService,
-             Game game, Campaign campaign)
+        public GamerManager(IUserValidatonService userValidatonService, ICampaignService campaignService, ISalesService salesService)
         {
             _userValidatonService = userValidatonService;
             _campaignService = campaignService;
             _salesService = salesService;
-            _game = game;
-            _campaign = campaign;
 
         }
 
-        public override void Add(Gamer gamer)
+        public override void Add(Gamer gamer, Game game, Campaign campaign)
         {
             if (_userValidatonService.Validate(gamer))
             {
                 
-                base.Add(gamer);
-                _salesService.Sell(_campaignService, _game, _campaign);
+                base.Add(gamer, game, campaign);
+                _salesService.Sell(_campaignService, game, campaign);
             }
             else
             {
@@ -40,7 +35,7 @@ namespace GameApp.Concrete
 
         }
 
-        public override void Delete(Gamer gamer)
+        public override void Delete(Gamer gamer, Game game, Campaign campaign)
         {
             throw new NotImplementedException();
         }
