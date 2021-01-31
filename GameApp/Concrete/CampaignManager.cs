@@ -10,8 +10,8 @@ namespace GameApp.Concrete
     {
         public int Add(Game game, Campaign campaign)
         {
-            var result = (game.UnitPrice * campaign.DiscountRate);
-            return result;
+            var resultCampaign = (game.UnitPrice / campaign.DiscountRate);
+            return resultCampaign;
       
         }
 
