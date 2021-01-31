@@ -11,7 +11,7 @@ namespace GameApp.Abstract
         public virtual void Add(Gamer gamer)
         {
           
-            Console.WriteLine("{0} isimli oyuncu sisteme girdi", gamer.FirstName);
+            Console.WriteLine("{0} isimli oyuncu sisteme girdi.", gamer.FirstName);
         }
 
         public abstract void Delete(Gamer gamer);
