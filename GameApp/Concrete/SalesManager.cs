@@ -8,16 +8,16 @@ namespace GameApp.Concrete
 {
     public class SalesManager : ISalesService
     {
-        ICampaignService _campaignService;
+        //ICampaignService _campaignService;
 
-        public SalesManager(ICampaignService campaignService)
-        {
-            _campaignService = campaignService;
-        }
+        //public SalesManager(ICampaignService campaignService)
+        //{
+        //    _campaignService = campaignService;
+        //}
 
-        public void Sell(Game game,Campaign campaign)
+        public void Sell(ICampaignService campaignService, Game game,Campaign campaign)
         {
-            var resultUnitPrice =  _campaignService.Add(game,campaign);
+            var resultUnitPrice = campaignService.Add(game,campaign);
             Console.WriteLine("{0} oyunu {1} kampanyası ile {2} tl' ye satildi.",game.GameName, campaign.CampaignName,resultUnitPrice);
         }
     }

@@ -7,6 +7,6 @@ namespace GameApp.Abstract
 {
     public interface ISalesService
     {
-        void Sell(Game game, Campaign campaign);
+        void Sell(ICampaignService campaignService, Game game, Campaign campaign);
     }
 }
