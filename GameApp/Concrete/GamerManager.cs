@@ -23,7 +23,7 @@ namespace GameApp.Concrete
             }
             else
             {
-                throw new Exception("Not a valid user");
+                Console.WriteLine("Not a valid user");
             }
 
         }

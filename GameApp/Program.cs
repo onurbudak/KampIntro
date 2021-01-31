@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GameApp.Concrete;
+using GameApp.Entities;
+using System;
 
 namespace GameApp
 {
@@ -6,7 +8,10 @@ namespace GameApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            GamerManager gamerManager = new GamerManager(new UserValidationService());
+            gamerManager.Add(new Gamer { Id = 1, FirstName = "Onur", LastName = "Budak", NationalityId = "123456", BirthYear = 1997 });
+
+            Console.ReadLine();
 
         }
     }
