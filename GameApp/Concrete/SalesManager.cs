@@ -18,7 +18,7 @@ namespace GameApp.Concrete
         public void Sell(Game game,Campaign campaign)
         {
             var resultUnitPrice =  _campaignService.Add(game,campaign);
-            Console.WriteLine("Oyun {0} kampanyası ile {1} tl' ye satildi", campaign.CampaignName,resultUnitPrice);
+            Console.WriteLine("{0} oyunu {1} kampanyası ile {2} tl' ye satildi.",game.GameName, campaign.CampaignName,resultUnitPrice);
         }
     }
 }
