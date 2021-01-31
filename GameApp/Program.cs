@@ -14,7 +14,7 @@ namespace GameApp
                 new SalesManager(),
                 new Game { Id = 1, GameName = "GTA5", UnitPrice = 200 },
                 new Campaign { Id = 1, CampaignName = "Muhteşem Cuma", DiscountRate = 7 });
-            gamerManager.Add(new Gamer { Id = 1, FirstName = "Onur", LastName = "Budakf", NationalityId = "123456", BirthYear = 1997 });
+            gamerManager.Add(new Gamer { Id = 1, FirstName = "Onur", LastName = "Budak", NationalityId = "123456", BirthYear = 1997 });
 
             Console.ReadLine();
 
