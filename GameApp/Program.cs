@@ -10,12 +10,12 @@ namespace GameApp
         static void Main(string[] args)
         {
             GamerManager gamerManager = new GamerManager(
-                new UserValidationService(new MernisServiceAdapter()),
+                new UserValidationService(new MyServiceAdapter()),
                 new CampaignManager(),
                 new SalesManager(),
                 new Game { Id = 1, GameName = "GTA5", UnitPrice = 200 },
                 new Campaign { Id = 1, CampaignName = "Muhteşem Cuma", DiscountRate = 7 });
-            gamerManager.Add(new Gamer { Id = 1, FirstName = "UĞUR", LastName = "BUDAK", NationalityId = "123456", BirthYear = 2000 });
+            gamerManager.Add(new Gamer { Id = 1, FirstName = "ONUR", LastName = "BUDAK", NationalityId = "123456", BirthYear = 1997 });
 
             Console.ReadLine();
 

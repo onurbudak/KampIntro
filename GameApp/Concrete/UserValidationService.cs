@@ -19,16 +19,8 @@ namespace GameApp.Concrete
         {
 
            var result =  _checkService.CheckIfRealPerson(gamer);
-            return result;
-
-           //if(gamer.Id == 1 && gamer.FirstName == "Onur" && gamer.LastName == "Budak" && gamer.NationalityId == "123456" && gamer.BirthYear == 1997)
-           // {
-           //     return true;
-           // }
-           //else
-           // {
-           //     return false;
-           // }
+           return result;
+          
         }
     }
 }

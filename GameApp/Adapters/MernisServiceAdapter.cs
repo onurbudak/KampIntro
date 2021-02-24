@@ -14,6 +14,11 @@ namespace GameApp.Adapters
         public bool CheckIfRealPerson(Gamer gamer)
         {        
             var result =  client.TCKimlikNoDogrulaAsync((long)Convert.ToUInt64( gamer.NationalityId),gamer.FirstName.ToUpper(),gamer.LastName.ToUpper(),gamer.BirthYear).Result.Body.TCKimlikNoDogrulaResult;
+
+            if(result)
+            {
+                Console.WriteLine("MernisServiceAdapter ile kontrol edildi");
+            }
             return result;
         }
     }
