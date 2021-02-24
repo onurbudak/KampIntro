@@ -8,16 +8,27 @@ namespace GameApp.Concrete
 {
     public class UserValidationService : IUserValidatonService
     {
+        ICheckService _checkService;
+
+        public UserValidationService(ICheckService checkService)
+        {
+            _checkService = checkService;
+        }
+
         public bool Validate(Gamer gamer)
         {
-           if(gamer.Id == 1 && gamer.FirstName == "Onur" && gamer.LastName == "Budak" && gamer.NationalityId == "123456" && gamer.BirthYear == 1997)
-            {
-                return true;
-            }
-           else
-            {
-                return false;
-            }
+
+           var result =  _checkService.CheckIfRealPerson(gamer);
+            return result;
+
+           //if(gamer.Id == 1 && gamer.FirstName == "Onur" && gamer.LastName == "Budak" && gamer.NationalityId == "123456" && gamer.BirthYear == 1997)
+           // {
+           //     return true;
+           // }
+           //else
+           // {
+           //     return false;
+           // }
         }
     }
 }
